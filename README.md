@@ -1,1 +1,2 @@
-# parser_vacancies
+Парсер вакансий.
+
