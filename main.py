@@ -1,5 +1,5 @@
 from classes import HeadHunterAPI, JSONSaver, SuperJobAPI
-from utils import user_interaction_feature
+from utils import working_with_data
 
 
 def user_interaction():
@@ -40,7 +40,7 @@ def user_interaction():
         json_saver.add_vacancies(hh_vacancies)
         data = json_saver.select_hh()
         # Выбор пользователем способа валидации данных и возврат print_vacancies для печати в консоль.
-        print_vacancies = user_interaction_feature(data)
+        print_vacancies = working_with_data(data)
         # Печать в консоль.
         for i in print_vacancies:
             print(i, end=f'\n{"=" * 100}\n')
@@ -56,11 +56,11 @@ def user_interaction():
         json_saver.add_vacancies(sj_vacancies)
         data = json_saver.select_sj()
         # Выбор пользователем способа валидации данных и возврат print_vacancies для печати в консоль.
-        print_vacancies = user_interaction_feature(data)
+        print_vacancies = working_with_data(data)
         # Печать в консоль.
         for i in print_vacancies:
             print(i, end=f'\n{"=" * 100}\n')
 
 
-if __name__ == "__main__":
+while True:
     user_interaction()
